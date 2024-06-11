@@ -66,7 +66,7 @@ data_aiea <-
   mutate(
     yearmonth = yearmonth(date),
     
-    # AIAE is total market value of stocks divided by total market value of stocks and bonds
+    # AIAE is total market value of stocks divided by total market value of stocks + bonds
     stocks = NCBEILQ027S + FBCELLQ027S,
 
     bonds  = BCNSDODNS + CMDEBT + FGSDODNS + SLGSDODNS + DODFFSWCMI,
@@ -164,7 +164,7 @@ g_aiea_10yr <-
                      breaks = pretty_breaks(10),
                      limits = c(0.20, 0.55),
                      sec.axis = sec_axis(~ c0 + c1 *., 
-                                         name = "Subsequent S&P 500 Average Yearly Return over the next 10 years",
+                                         name = "S&P 500 Avg Real Return per year over the next 10 years",
                                          labels = scales::percent_format(accuracy = 1), 
                                          breaks = pretty_breaks(10)))
 
