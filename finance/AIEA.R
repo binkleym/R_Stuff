@@ -66,7 +66,7 @@ data_aiea <-
   mutate(
     yearmonth = yearmonth(date),
     
-    # AIAE is total market value of stocks divided by total market value of stocks + bonds
+    # AIEA is total market value of stocks divided by total market value of stocks + bonds
     stocks = NCBEILQ027S + FBCELLQ027S,
 
     bonds  = BCNSDODNS + CMDEBT + FGSDODNS + SLGSDODNS + DODFFSWCMI,
